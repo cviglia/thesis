@@ -8,7 +8,6 @@ head(life4p)
 #...............................................................
 setwd("C:/Rtesi/")
 
-install.packages('bipartite')
 library(bipartite) 
 
 data("memmott1999") 
@@ -23,11 +22,12 @@ setwd("C:/Rtesi/")
 
 library(vegan)
 
-sub <- read.csv("data/submission_en.node.3792.csv", 
+sub <- read.csv("data/sub_en.node.3792_30_05.csv", 
          header = TRUE, sep = ",")
 View(sub)
 
 
-sub_env <- read.table("data/sub.txt",
+sub_env <- read.table("data/sub_en_30_05.txt",
            header = TRUE, sep = ",")
 View(sub_env)
+
