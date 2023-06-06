@@ -10,9 +10,10 @@ visweb(memmott1999)
 
 
 #................................................................
-setwd("C:/Rtesi/")
+setwd("C:/Rtesi/") # directory
 
-library(vegan)
+library(vegan) #librerie
+library(dplyr)
 
 sub <- read.csv("data/sub_en.node.3792_30_05.csv", 
          header = TRUE, sep = ",")
@@ -23,3 +24,4 @@ sub_env <- read.table("data/sub_en_30_05.txt",
            header = TRUE, sep = ",")
 View(sub_env)
 
+str(sub) # controlla struttura
