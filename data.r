@@ -27,5 +27,7 @@ View(sub_env)
 str(sub) #controlla struttura
 summary.data.frame(sub)
 
-barplot(table(sub$real.taxonomy.pollinator..Title)) #barplot con etichette perpendicolari
 par(las=2)
+barplot(table(sub$real.taxonomy.pollinator..Title),
+        main = "Taxonomy pollinators")
+
