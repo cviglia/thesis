@@ -20,11 +20,6 @@ sub <- read.csv("data/sub_en.node.3792_30_05.csv",
          header = TRUE, sep = ",")
 View(sub)
 
-
-sub_env <- read.table("data/sub_en_30_05.txt",
-           header = TRUE, sep = ",")
-View(sub_env)
-
 # controlla struttura
 str(sub) 
 # data.frame with	1632 obs. of  45 variables
