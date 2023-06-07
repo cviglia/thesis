@@ -10,10 +10,10 @@ visweb(memmott1999)
 
 
 #................................................................
-#directory
+# directory
 setwd("C:/Rtesi/") 
 
-#librerie
+# librerie
 library(vegan) 
 
 sub <- read.csv("data/sub_en.node.3792_30_05.csv", 
@@ -25,8 +25,11 @@ sub_env <- read.table("data/sub_en_30_05.txt",
            header = TRUE, sep = ",")
 View(sub_env)
 
-#controlla struttura
+# controlla struttura
 str(sub) 
+# data.frame with	1632 obs. of  45 variables
+
+# summary
 summary.data.frame(sub)
 
 # barplot con etichette perpendicolari
