@@ -45,7 +45,7 @@ sub <- sub[!(sub$real.taxonomy.pollinator..Title == ""), ]
 par(las=2)
 barplot(table(sub$real.taxonomy.pollinator..Title),
         main = "Taxonomy pollinators",
-        cex.axis=0.5, cex.names=0.5)
+        cex.axis=0.3, cex.names=0.3)
 
 # immagine png
 png(filename = "outputs/barplot.png",
@@ -55,6 +55,5 @@ png(filename = "outputs/barplot.png",
 par(las=2)
 barplot(table(sub$real.taxonomy.pollinator..Title),
         main = "Taxonomy pollinators",
-        cex.axis=0.5, cex.names=0.5)
+        cex.axis=0.3, cex.names=0.3)
 dev.off()
-
