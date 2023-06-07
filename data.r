@@ -39,7 +39,7 @@ sub <- sub[!(sub$real.taxonomy.pollinator..Title == ""), ]
 # riduco dimensioni etichette
 par(las=2)
 barplot(table(sub$real.taxonomy.pollinator..Title),
-        main = "Taxonomy pollinators",
+        main = "Taxonomy of pollinators",
         cex.axis=0.3, cex.names=0.3)
 
 # immagine png
@@ -49,6 +49,6 @@ png(filename = "outputs/barplot.png",
     res = 300)
 par(las=2)
 barplot(table(sub$real.taxonomy.pollinator..Title),
-        main = "Taxonomy pollinators",
+        main = "Taxonomy of pollinators",
         cex.axis=0.3, cex.names=0.3)
 dev.off()
