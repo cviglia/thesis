@@ -34,6 +34,13 @@ par(las=2)
 barplot(table(sub$real.taxonomy.pollinator..Title),
         main = "Taxonomy pollinators")
 
+# to see omitted rows
+options(max.print=1000000)
+# per vedere solo i nomi degli impollinatori
+sub$real.taxonomy.pollinator..Title
+
+
+
 # immagine png
 png(filename = "outputs/barplot.png",
     width = 1800,
