@@ -15,7 +15,6 @@ setwd("C:/Rtesi/")
 
 #librerie
 library(vegan) 
-library(dplyr)
 
 sub <- read.csv("data/sub_en.node.3792_30_05.csv", 
          header = TRUE, sep = ",")
