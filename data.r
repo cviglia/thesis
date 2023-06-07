@@ -32,17 +32,18 @@ str(sub)
 # summary
 summary.data.frame(sub)
 
-# barplot con etichette perpendicolari
-par(las=2) 
-barplot(table(sub$real.taxonomy.pollinator..Title),
-        main = "Taxonomy pollinators")
-
 # to see omitted rows
 options(max.print=1000000)
 # per vedere solo i nomi degli impollinatori
 sub$real.taxonomy.pollinator..Title
 
+# rimuovere celle bianche
+sub <- sub[!(sub$real.taxonomy.pollinator..Title == ""), ]
 
+# barplot con etichette perpendicolari
+par(las=2) 
+barplot(table(sub$real.taxonomy.pollinator..Title),
+        main = "Taxonomy pollinators")
 
 # immagine png
 png(filename = "outputs/barplot.png",
