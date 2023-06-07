@@ -41,9 +41,11 @@ sub$real.taxonomy.pollinator..Title
 sub <- sub[!(sub$real.taxonomy.pollinator..Title == ""), ]
 
 # barplot con etichette perpendicolari
-par(las=2) 
+# riduco dimensioni etichette
+par(las=2)
 barplot(table(sub$real.taxonomy.pollinator..Title),
-        main = "Taxonomy pollinators")
+        main = "Taxonomy pollinators",
+        cex.axis=0.5, cex.names=0.5)
 
 # immagine png
 png(filename = "outputs/barplot.png",
@@ -52,6 +54,7 @@ png(filename = "outputs/barplot.png",
     res = 300)
 par(las=2)
 barplot(table(sub$real.taxonomy.pollinator..Title),
-        main = "Taxonomy pollinators")
+        main = "Taxonomy pollinators",
+        cex.axis=0.5, cex.names=0.5)
 dev.off()
 
