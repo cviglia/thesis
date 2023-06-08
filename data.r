@@ -55,9 +55,10 @@ dev.off()
 
 
 #................................................................
+library("readxl")
 
-copia <- read.table(file = "data/sub_en.node.3792_30_05_Copia.csv", 
-                      sep = "\t", header=TRUE)
+read_excel("data/sub_en.node.3792_30_05_Copia.xlsx")
+
 
 
 
