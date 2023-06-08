@@ -55,9 +55,31 @@ dev.off()
 
 
 #................................................................
+# tentativi
 library("readxl")
 
-read_excel("data/sub_en.node.3792_30_05_Copia.xlsx")
+subex <- read_excel("data/sub_en.node.3792_30_05_Copia.xlsx")
+View(subex)
+
+setwd("C:/Rtesi/")
+library(vegan)
+
+read.table("data/sub_en.node.3792_30_05_Copia.txt",
+           sep =" ",
+           header = T)
+
+library("readxl")
+
+subex <- read_excel("data/sub_en.node.3792_30_05_Copia.xlsx")
+View(subex)
+
+str(subex)
+
+subcsv <- read.csv("data/sub_en.node.3792_30_05_Copia.csv", 
+                header = TRUE, sep = ",")
+View(subcsv)
+
+
 
 
 
