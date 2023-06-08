@@ -52,3 +52,13 @@ barplot(table(sub$real.taxonomy.pollinator..Title),
         main = "Taxonomy of pollinators",
         cex.axis=0.3, cex.names=0.3)
 dev.off()
+
+
+#................................................................
+
+copia <- read.table(file = "data/sub_en.node.3792_30_05_Copia.csv", 
+                      sep = "\t", header=TRUE)
+
+
+
+
