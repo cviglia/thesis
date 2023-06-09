@@ -12,14 +12,13 @@ View(sub)
 str(sub) 
 # data.frame with	1632 obs. of  45 variables
 
-
 # alcuni dati sono scritti male, quindi ho modificato il file
 
 setwd("C:/Rtesi/")
 
 library(vegan)
 
-subcsv <- read.csv("data/sub_en.node.3792_30_05_Copia2.csv",
+subcsv <- read.csv("data/sub_en.node.3792_30_05_Copia.csv",
            sep =";",
            header = T)
 
