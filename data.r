@@ -32,7 +32,8 @@ options(max.print=1000000)
 # per vedere solo i nomi degli impollinatori
 subcsv$real.taxonomy.pollinator..Title
 
-# rimuovere celle bianche
+# rimuovo celle bianche (sub non ancora analizzate)
+# lascio gli NAs perché rappresentano comunque un dato
 subcsv <- subcsv[!(subcsv$real.taxonomy.pollinator..Title == ""), ]
 
 # ricontrollo solo i nomi degli impollinatori
