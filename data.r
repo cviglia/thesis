@@ -17,13 +17,15 @@ options(max.print=1000000)
 # per vedere solo nomi famiglie impollinatori
 subcsv$real.taxonomy.pollinator..Family
 
-# per non vedere caselle vuote
+# per non vedere caselle vuote, bianche (sub non ancora analizzate)
+# lascio gli NAs perché rappresentano comunque un dato
 subcsv <- subcsv[!(subcsv$real.taxonomy.pollinator..Family == ""), ]
 
 subcsv$real.taxonomy.pollinator..Family
 str(subcsv$real.taxonomy.pollinator..Family)
 
-# barplot
+# barplot con etichette perpendicolari
+# riduco dimensioni etichette
 par(las=2)
 barplot(table(subcsv$real.taxonomy.pollinator..Family),
         main = "Taxonomy of pollinators",
