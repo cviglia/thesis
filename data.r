@@ -14,7 +14,7 @@ str(subcsv)
 
 options(max.print=1000000)
 
-# per vedere solo nomi famiglie impollinatori
+# per vedere solo famiglie impollinatori
 subcsv$real.taxonomy.pollinator..Family
 
 # per non vedere caselle vuote, bianche (sub non ancora analizzate)
@@ -28,23 +28,45 @@ str(subcsv$real.taxonomy.pollinator..Family)
 # riduco dimensioni etichette
 par(las=2)
 barplot(table(subcsv$real.taxonomy.pollinator..Family),
-        main = "Taxonomy of pollinators",
+        main = "Families of pollinators",
         cex.axis=0.3, cex.names=0.3)
 
 # immagine png
-png(filename = "outputs/barplot.png",
+png(filename = "outputs/pollinators_families.png",
     width = 1800,
     height = 1800,
     res = 300)
 par(las=2)
 barplot(table(subcsv$real.taxonomy.pollinator..Family),
-        main = "Taxonomy of pollinators",
+        main = "Families of pollinators",
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
 
 str(subcsv$real.taxonomy.pollinator..Family)
 
+
+# per vedere solo nomi famiglie piante
+subcsv$real.taxonomy.pollinator..Family
+subcsv <- subcsv[!(subcsv$real.taxonomy.plant..Family == ""), ]
+
+subcsv$real.taxonomy.plant..Family
+str(subcsv$real.taxonomy.plant..Family)
+
+par(las=2)
+barplot(table(subcsv$real.taxonomy.plant..Family),
+        main = "Families of plants",
+        cex.axis=0.3, cex.names=0.3)
+
+png(filename = "outputs/plants_families.png",
+    width = 1800,
+    height = 1800,
+    res = 300)
+par(las=2)
+barplot(table(subcsv$real.taxonomy.plants..Family),
+        main = "Families of plants",
+        cex.axis=0.3, cex.names=0.3)
+dev.off()
 
 
 
