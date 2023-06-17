@@ -63,7 +63,7 @@ png(filename = "outputs/plants_families.png",
     height = 1800,
     res = 300)
 par(las=2)
-barplot(table(subcsv$real.taxonomy.plants..Family),
+barplot(table(subcsv$real.taxonomy.plant..Family),
         main = "Families of plants",
         cex.axis=0.3, cex.names=0.3)
 dev.off()
