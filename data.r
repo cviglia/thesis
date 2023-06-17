@@ -56,6 +56,7 @@ str(subcsv$real.taxonomy.plant..Family)
 par(las=2)
 barplot(table(subcsv$real.taxonomy.plant..Family),
         main = "Families of plants",
+        ylim = c(0,200),
         cex.axis=0.3, cex.names=0.3)
 
 png(filename = "outputs/plants_families.png",
@@ -65,6 +66,7 @@ png(filename = "outputs/plants_families.png",
 par(las=2)
 barplot(table(subcsv$real.taxonomy.plant..Family),
         main = "Families of plants",
+        ylim = c(0,200),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
