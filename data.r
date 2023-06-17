@@ -46,8 +46,8 @@ dev.off()
 str(subcsv$real.taxonomy.pollinator..Family)
 
 
-# per vedere solo nomi famiglie piante
-subcsv$real.taxonomy.pollinator..Family
+# per vedere solo famiglie piante
+subcsv$real.taxonomy.plant..Family
 subcsv <- subcsv[!(subcsv$real.taxonomy.plant..Family == ""), ]
 
 subcsv$real.taxonomy.plant..Family
@@ -70,9 +70,31 @@ barplot(table(subcsv$real.taxonomy.plant..Family),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
+# gruppi di impollinatori
+subcsv$real.taxonomy.pollinator..Group
 
+subcsv <- subcsv[!(subcsv$real.taxonomy.pollinator..Group == ""), ]
 
+subcsv$real.taxonomy.pollinator..Group
+str(subcsv$real.taxonomy.pollinator..Group)
 
+# barplot con etichette perpendicolari
+# riduco dimensioni etichette
+par(las=2)
+barplot(table(subcsv$real.taxonomy.pollinator..Group),
+        main = "Groups of pollinators",
+        cex.axis=0.3, cex.names=0.3)
+
+# immagine gruppi
+png(filename = "outputs/pollinators_groups.png",
+    width = 1800,
+    height = 1800,
+    res = 300)
+par(las=2)
+barplot(table(subcsv$real.taxonomy.pollinator..Group),
+        main = "Groups of pollinators",
+        cex.axis=0.3, cex.names=0.3)
+dev.off()
 
 
 
