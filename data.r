@@ -1,8 +1,9 @@
 # submissions LIFE 4 P
+# 1640 submissions
 
-# 670 impollinatori indentificati fino al genere
-# 694 impollinatori indentificati fino alla famiglia
-# 715 impollinatori indentificati fino all'ordine
+# 670 impollinatori identificati fino al genere
+# 694 impollinatori identificati fino alla famiglia
+# 715 impollinatori identificati fino all'ordine
 
 # 637 piante identificate fino al genere
 # 686 piante identificate fino alla famiglia
