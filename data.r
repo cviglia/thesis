@@ -3,6 +3,8 @@
 setwd("C:/Rtesi/")
 
 library(vegan)
+library(bipartite)
+
 
 subcsv <- read.csv("data/sub_en.node.3792_30_05_Copia.csv",
                    sep =";",
@@ -96,5 +98,6 @@ barplot(table(subcsv$real.taxonomy.pollinator..Group),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
+# network
 
 
