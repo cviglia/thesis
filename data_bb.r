@@ -26,13 +26,6 @@ barplot(table(bb$ï..pollinator),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
-
-# network
-
-
-
-
-
 # plants groups bioblitz
 par(las=2)
 barplot(table(bb$plant),
@@ -49,3 +42,9 @@ barplot(table(bb$plant),
         main = "Families of plants",
         cex.axis=0.3, cex.names=0.3)
 dev.off()
+
+
+# network
+
+
+
