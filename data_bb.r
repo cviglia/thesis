@@ -3,7 +3,7 @@
 setwd("C:/Rtesi/")
 
 library(vegan)
-library(bipartite)
+library(networkD3)
 
 bb <- read.csv("data/bioblitz_20.05.csv",
                sep =";", 
@@ -25,6 +25,13 @@ barplot(table(bb$ï..pollinator),
         main = "Groups of pollinators",
         cex.axis=0.3, cex.names=0.3)
 dev.off()
+
+
+# network
+
+
+
+
 
 # plants groups bioblitz
 par(las=2)
