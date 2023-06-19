@@ -45,6 +45,14 @@ dev.off()
 
 
 # network
+setwd("C:/Rtesi/")
+library(bipartite)
+library(openxlsx)
+
+network <- read.xlsx("data/bb20.05_network.xlsx", colNames = TRUE, rowNames = TRUE)
+
+plotweb(network)
+
 
 
 
