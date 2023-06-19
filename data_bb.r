@@ -51,7 +51,7 @@ library(openxlsx)
 
 network <- read.xlsx("data/bb20.05_network.xlsx", colNames = TRUE, rowNames = TRUE)
 
-plotweb(network)
+plotweb(network, text.rot=90)
 
 
 
