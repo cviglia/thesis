@@ -1,12 +1,14 @@
 # submissions LIFE 4 P
-# 1633 submissions
 
+# versione 30 maggio
+# 1633 submissions
 # 670 impollinatori identificati fino al genere
 # 694 impollinatori identificati fino alla famiglia
 # 715 impollinatori identificati fino all'ordine
-
 # 637 piante identificate fino al genere
 # 686 piante identificate fino alla famiglia
+
+# versione 27 giugno
 
 setwd("C:/Rtesi/")
 
@@ -14,13 +16,13 @@ library(vegan)
 library(bipartite)
 
 
-subcsv <- read.csv("data/sub_en.node.3792_30_05_Copia.csv",
+subcsv <- read.csv("data/sub_en.node.3792_27_06.csv",
                    sep =";",
                    header = T)
 
 View(subcsv)
 str(subcsv)
-# data.frame:	1632 obs. of  55 variables
+# data.frame:	1720 obs. of  55 variables
 
 options(max.print=1000000)
 
