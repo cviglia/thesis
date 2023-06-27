@@ -9,6 +9,7 @@
 # 686 piante identificate fino alla famiglia
 
 # versione 27 giugno
+# 1720 submissions
 
 setwd("C:/Rtesi/")
 
