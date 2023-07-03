@@ -45,6 +45,7 @@ str(subcsv$real.taxonomy.pollinator..Family)
 par(las=2)
 barplot(table(subcsv$real.taxonomy.pollinator..Family),
         main = "Families of pollinators",
+        ylim = c(0,250),
         cex.axis=0.3, cex.names=0.3)
 
 # immagine png
@@ -55,6 +56,7 @@ png(filename = "outputs/pollinators_families.png",
 par(las=2)
 barplot(table(subcsv$real.taxonomy.pollinator..Family),
         main = "Families of pollinators",
+        ylim = c(0,250),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
@@ -72,7 +74,7 @@ str(subcsv$real.taxonomy.plant..Family)
 par(las=2)
 barplot(table(subcsv$real.taxonomy.plant..Family),
         main = "Families of plants",
-        ylim = c(0,200),
+        ylim = c(0,300),
         cex.axis=0.3, cex.names=0.3)
 
 png(filename = "outputs/plants_families.png",
@@ -82,7 +84,7 @@ png(filename = "outputs/plants_families.png",
 par(las=2)
 barplot(table(subcsv$real.taxonomy.plant..Family),
         main = "Families of plants",
-        ylim = c(0,200),
+        ylim = c(0,300),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
