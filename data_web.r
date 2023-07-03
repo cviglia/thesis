@@ -114,6 +114,42 @@ barplot(table(subcsv$real.taxonomy.pollinator..Group),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
+
+# per vedere solo ordini impollinatori
+subcsv$real.taxonomy.pollinator..Order
+
+# per non vedere caselle vuote, bianche (sub non ancora analizzate)
+# lascio gli NAs perché rappresentano comunque un dato
+subcsv <- subcsv[!(subcsv$real.taxonomy.pollinator..Order == ""), ]
+
+# forse ne omette alcuni
+
+subcsv$real.taxonomy.pollinator..Order
+str(subcsv$real.taxonomy.pollinator..Order)
+
+# barplot con etichette perpendicolari
+# riduco dimensioni etichette
+par(las=2)
+barplot(table(subcsv$real.taxonomy.pollinator..Order),
+        main = "Orders of pollinators",
+        ylim = c(0,400),
+        cex.axis=0.3, cex.names=0.3)
+
+# immagine png
+png(filename = "outputs/pollinators_orders.png",
+    width = 1800,
+    height = 1800,
+    res = 300)
+par(las=2)
+barplot(table(subcsv$real.taxonomy.pollinator..Order),
+        main = "Orders of pollinators",
+        ylim = c(0,400),
+        cex.axis=0.3, cex.names=0.3)
+dev.off()
+
+
+
+
 # network
 
 
