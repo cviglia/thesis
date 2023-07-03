@@ -11,19 +11,22 @@
 # versione 27 giugno
 # 1720 submissions
 
+# 3 luglio
+# 1732 submissions
+
 setwd("C:/Rtesi/")
 
 library(vegan)
 library(bipartite)
 
 
-subcsv <- read.csv("data/sub_en.node.3792_27_06.csv",
+subcsv <- read.csv("data/sub_en.node.3792_07_03.csv",
                    sep =";",
                    header = T)
 
 View(subcsv)
 str(subcsv)
-# data.frame:	1720 obs. of  55 variables
+# data.frame:	1732 obs. of  55 variables:
 
 options(max.print=1000000)
 
