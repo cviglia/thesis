@@ -11,8 +11,14 @@
 # versione 27 giugno
 # 1720 submissions
 
-# 3 luglio
+# versione 3 luglio
 # 1732 submissions
+# 844 impollinatori identificati fino al genere
+# 920 impollinatori identificati fino alla famiglia
+# 959 impollinatori identificati fino all'ordine
+# 1243 piante identificate fino al genere
+# 1367 piante identificate fino alla famiglia
+
 
 setwd("C:/Rtesi/")
 
@@ -61,9 +67,6 @@ barplot(table(subcsv$real.taxonomy.pollinator..Family),
 dev.off()
 
 
-str(subcsv$real.taxonomy.pollinator..Family)
-
-
 # per vedere solo famiglie piante
 subcsv$real.taxonomy.plant..Family
 subcsv <- subcsv[!(subcsv$real.taxonomy.plant..Family == ""), ]
@@ -88,7 +91,7 @@ barplot(table(subcsv$real.taxonomy.plant..Family),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
-# gruppi di impollinatori
+# per vedere solo gruppi di impollinatori
 subcsv$real.taxonomy.pollinator..Group
 
 subcsv <- subcsv[!(subcsv$real.taxonomy.pollinator..Group == ""), ]
@@ -122,7 +125,7 @@ subcsv$real.taxonomy.pollinator..Order
 # lascio gli NAs perché rappresentano comunque un dato
 subcsv <- subcsv[!(subcsv$real.taxonomy.pollinator..Order == ""), ]
 
-# forse ne omette alcuni
+# forse ne omette alcuni?
 
 subcsv$real.taxonomy.pollinator..Order
 str(subcsv$real.taxonomy.pollinator..Order)
