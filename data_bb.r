@@ -49,9 +49,9 @@ setwd("C:/Rtesi/")
 library(bipartite)
 library(openxlsx)
 
-network <- read.xlsx("data/bb20.05_network.xlsx", colNames = TRUE, rowNames = TRUE)
+network_bb <- read.xlsx("data/bb20.05_network.xlsx", colNames = TRUE, rowNames = TRUE)
 
-plotweb(network, text.rot=90)
+plotweb(network_bb, text.rot=90)
 
 
 
