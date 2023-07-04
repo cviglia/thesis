@@ -1,10 +1,9 @@
-# bioblitz 20 maggio
-
 setwd("C:/Rtesi/")
 
 library(vegan)
 library(networkD3)
 
+# bioblitz 20 maggio
 bb20 <- read.csv("data/bioblitz_20.05.csv",
                  sep =";", 
                  header = T)
