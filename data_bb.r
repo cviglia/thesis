@@ -53,6 +53,7 @@ network_bb <- read.xlsx("data/bb20.05_network.xlsx", colNames = TRUE, rowNames =
 
 plotweb(network_bb, text.rot=90)
 
+# bioblitz 6 maggio
 
 
 
