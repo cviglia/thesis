@@ -13,6 +13,7 @@
 
 # versione 3 luglio
 # 1732 submissions
+# 743 certified
 # 844 impollinatori identificati fino al genere
 # 920 impollinatori identificati fino alla famiglia
 # 959 impollinatori identificati fino all'ordine
