@@ -14,6 +14,7 @@ View(bb20)
 par(las=2)
 barplot(table(bb20$ï..pollinator),
         main = "Groups of pollinators",
+        ylim = c(0,120),
         cex.axis=0.3, cex.names=0.3)
 
 # immagine png
@@ -24,6 +25,7 @@ png(filename = "outputs/groups_bioblitz_20.png",
 par(las=2)
 barplot(table(bb20$ï..pollinator),
         main = "Groups of pollinators",
+        ylim = c(0,120),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
@@ -32,6 +34,7 @@ dev.off()
 par(las=2)
 barplot(table(bb20$plant),
         main = "Families of plants",
+        ylim = c(0,120),
         cex.axis=0.3, cex.names=0.3)
 
 # immagine png
@@ -42,6 +45,7 @@ png(filename = "outputs/families_bioblitz_20.png",
 par(las=2)
 barplot(table(bb20$plant),
         main = "Families of plants",
+        ylim = c(0,120),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
@@ -66,6 +70,7 @@ bb06 <- read.csv("data/bioblitz_06.05.csv",
 par(las=2)
 barplot(table(bb06$ï..pollinator),
         main = "Groups of pollinators",
+        ylim = c(0,160),
         cex.axis=0.3, cex.names=0.3)
 
 # immagine png
@@ -76,13 +81,15 @@ png(filename = "outputs/groups_bioblitz_06.png",
 par(las=2)
 barplot(table(bb06$ï..pollinator),
         main = "Groups of pollinators",
+        ylim = c(0,160),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
-# plants groups bioblitz
+# plants families bioblitz
 par(las=2)
 barplot(table(bb06$plant),
         main = "Families of plants",
+        ylim = c(0,80),
         cex.axis=0.3, cex.names=0.3)
 
 # immagine png
@@ -93,6 +100,7 @@ png(filename = "outputs/families_bioblitz_06.png",
 par(las=2)
 barplot(table(bb06$plant),
         main = "Families of plants",
+        ylim = c(0,80),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
