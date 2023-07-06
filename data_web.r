@@ -136,7 +136,7 @@ str(subcsv$real.taxonomy.pollinator..Order)
 par(las=2)
 barplot(table(subcsv$real.taxonomy.pollinator..Order),
         main = "Orders of pollinators",
-        ylim = c(0,400),
+        ylim = c(0,800),
         cex.axis=0.3, cex.names=0.3)
 
 # immagine png
@@ -147,7 +147,7 @@ png(filename = "outputs/pollinators_orders.png",
 par(las=2)
 barplot(table(subcsv$real.taxonomy.pollinator..Order),
         main = "Orders of pollinators",
-        ylim = c(0,400),
+        ylim = c(0,800),
         cex.axis=0.3, cex.names=0.3)
 dev.off()
 
