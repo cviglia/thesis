@@ -158,7 +158,7 @@ dev.off()
 library(bipartite)
 library(openxlsx)
 
-network_web <- read.xlsx("data/network_web.xlsx", colNames = TRUE, rowNames = TRUE)
+network_web <- read.xlsx("data/web_network.xlsx", colNames = TRUE, rowNames = TRUE)
 
 plotweb(network_web, text.rot=90)
 
