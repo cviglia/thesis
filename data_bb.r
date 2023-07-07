@@ -11,22 +11,21 @@ bb20
 View(bb20)
 
 # pollinators groups bioblitz 20
-par(las=2)
+par(las=1)
 barplot(table(bb20$ï..pollinator),
         main = "Groups of pollinators",
         ylim = c(0,120),
-        cex.axis=0.3, cex.names=0.3)
+        cex.axis=0.7, cex.names=0.7)
 
-# immagine png
 png(filename = "outputs/groups_bioblitz_20.png",
     width = 1800,
     height = 1800,
     res = 300)
-par(las=2)
+par(las=1)
 barplot(table(bb20$ï..pollinator),
         main = "Groups of pollinators",
         ylim = c(0,120),
-        cex.axis=0.3, cex.names=0.3)
+        cex.axis=0.7, cex.names=0.7)
 dev.off()
 
 
@@ -35,7 +34,7 @@ par(las=2)
 barplot(table(bb20$plant),
         main = "Families of plants",
         ylim = c(0,120),
-        cex.axis=0.3, cex.names=0.3)
+        cex.axis=0.7, cex.names=0.7)
 
 # immagine png
 png(filename = "outputs/families_bioblitz_20.png",
@@ -46,7 +45,7 @@ par(las=2)
 barplot(table(bb20$plant),
         main = "Families of plants",
         ylim = c(0,120),
-        cex.axis=0.3, cex.names=0.3)
+        cex.axis=0.7, cex.names=0.7)
 dev.off()
 
 
@@ -67,22 +66,22 @@ bb06 <- read.csv("data/bioblitz_06.05.csv",
                header = T)
 
 # pollinators groups bioblitz
-par(las=2)
+par(las=1)
 barplot(table(bb06$ï..pollinator),
         main = "Groups of pollinators",
         ylim = c(0,160),
-        cex.axis=0.3, cex.names=0.3)
+        cex.axis=0.7, cex.names=0.7)
 
 # immagine png
 png(filename = "outputs/groups_bioblitz_06.png",
     width = 1800,
     height = 1800,
     res = 300)
-par(las=2)
+par(las=1)
 barplot(table(bb06$ï..pollinator),
         main = "Groups of pollinators",
         ylim = c(0,160),
-        cex.axis=0.3, cex.names=0.3)
+        cex.axis=0.7, cex.names=0.7)
 dev.off()
 
 # plants families bioblitz
@@ -90,7 +89,7 @@ par(las=2)
 barplot(table(bb06$plant),
         main = "Families of plants",
         ylim = c(0,80),
-        cex.axis=0.3, cex.names=0.3)
+        cex.axis=0.7, cex.names=0.7)
 
 # immagine png
 png(filename = "outputs/families_bioblitz_06.png",
@@ -101,7 +100,7 @@ par(las=2)
 barplot(table(bb06$plant),
         main = "Families of plants",
         ylim = c(0,80),
-        cex.axis=0.3, cex.names=0.3)
+        cex.axis=0.7, cex.names=0.7)
 dev.off()
 
 
