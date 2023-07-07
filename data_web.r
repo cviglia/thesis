@@ -105,6 +105,7 @@ str(subcsv$real.taxonomy.pollinator..Group)
 par(las=1)
 barplot(table(subcsv$real.taxonomy.pollinator..Group),
         main = "Groups of pollinators",
+        ylim = c(0,400),
         cex.axis=0.7, cex.names=0.7)
 
 # immagine gruppi
@@ -115,6 +116,7 @@ png(filename = "outputs/pollinators_groups.png",
 par(las=1)
 barplot(table(subcsv$real.taxonomy.pollinator..Group),
         main = "Groups of pollinators",
+        ylim = c(0,400),
         cex.axis=0.7, cex.names=0.7)
 dev.off()
 
