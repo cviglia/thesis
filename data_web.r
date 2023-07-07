@@ -102,20 +102,20 @@ str(subcsv$real.taxonomy.pollinator..Group)
 
 # barplot con etichette perpendicolari
 # riduco dimensioni etichette
-par(las=2)
+par(las=1)
 barplot(table(subcsv$real.taxonomy.pollinator..Group),
         main = "Groups of pollinators",
-        cex.axis=0.3, cex.names=0.3)
+        cex.axis=0.7, cex.names=0.7)
 
 # immagine gruppi
 png(filename = "outputs/pollinators_groups.png",
     width = 1800,
     height = 1800,
     res = 300)
-par(las=2)
+par(las=1)
 barplot(table(subcsv$real.taxonomy.pollinator..Group),
         main = "Groups of pollinators",
-        cex.axis=0.3, cex.names=0.3)
+        cex.axis=0.7, cex.names=0.7)
 dev.off()
 
 
@@ -133,22 +133,22 @@ str(subcsv$real.taxonomy.pollinator..Order)
 
 # barplot con etichette perpendicolari
 # riduco dimensioni etichette
-par(las=2)
+par(las=1)
 barplot(table(subcsv$real.taxonomy.pollinator..Order),
         main = "Orders of pollinators",
-        ylim = c(0,800),
-        cex.axis=0.3, cex.names=0.3)
+        ylim = c(0,500),
+        cex.axis=0.7, cex.names=0.7)
 
 # immagine png
 png(filename = "outputs/pollinators_orders.png",
     width = 1800,
     height = 1800,
     res = 300)
-par(las=2)
+par(las=1)
 barplot(table(subcsv$real.taxonomy.pollinator..Order),
         main = "Orders of pollinators",
-        ylim = c(0,800),
-        cex.axis=0.3, cex.names=0.3)
+        ylim = c(0,500),
+        cex.axis=0.7, cex.names=0.7)
 dev.off()
 
 
