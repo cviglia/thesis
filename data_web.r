@@ -153,6 +153,41 @@ barplot(table(subcsv$real.taxonomy.pollinator..Order),
         cex.axis=0.7, cex.names=0.7)
 dev.off()
 
+# stagioni
+subcsv$Season
+
+subcsv <- subcsv[!(subcsv$Season == ""), ]
+
+par(las=1)
+barplot(table(subcsv$Season),
+        main = "Seasons",
+        ylim = c(0,1000),
+        cex.axis=0.7, cex.names=0.7)
+
+# paesi
+subcsv$Country
+
+subcsv <- subcsv[!(subcsv$Country == ""), ]
+
+par(las=1)
+barplot(table(subcsv$Country),
+        main = "Countries",
+        ylim = c(0,1000),
+        cex.axis=0.6, cex.names=0.6)
+
+png(filename = "outputs/countries.png",
+    width = 1800,
+    height = 1800,
+    res = 300)
+par(las=1)
+barplot(table(subcsv$Country),
+        main = "Countries",
+        ylim = c(0,1000),
+        cex.axis=0.6, cex.names=0.6)
+dev.off()
+
+
+
 
 
 
