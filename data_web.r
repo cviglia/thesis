@@ -189,8 +189,6 @@ dev.off()
 
 
 
-
-
 # network
 library(bipartite)
 library(openxlsx)
@@ -219,6 +217,19 @@ plotweb(net_spr, text.rot=90)
 net_sum <- read.xlsx("data/summer_network.xlsx", colNames = TRUE, rowNames = TRUE)
 
 plotweb(net_win, text.rot=90)
+
+
+# network paesi
+# grecia primavera
+net_gsp <- read.xlsx("data/net_gree_spr.xlsx", colNames = TRUE, rowNames = TRUE)
+
+plotweb(net_gsp, text.rot=90)
+
+# italia primavera
+net_isp <- read.xlsx("data/net_ita_spr.xlsx", colNames = TRUE, rowNames = TRUE)
+
+plotweb(net_isp, text.rot=90)
+
 
 
 
