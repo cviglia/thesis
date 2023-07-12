@@ -230,7 +230,10 @@ net_isp <- read.xlsx("data/net_ita_spr.xlsx", colNames = TRUE, rowNames = TRUE)
 
 plotweb(net_isp, text.rot=90)
 
+# spagna primavera
+net_ssp <- read.xlsx("data/net_spa_spr.xlsx", colNames = TRUE, rowNames = TRUE)
 
+plotweb(net_ssp, text.rot=90)
 
 
 
