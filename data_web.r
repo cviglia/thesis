@@ -199,6 +199,28 @@ network_web <- read.xlsx("data/web_network.xlsx", colNames = TRUE, rowNames = TR
 
 plotweb(network_web, text.rot=90)
 
+# network stagioni
+# autunno
+net_aut <- read.xlsx("data/autumn_network.xlsx", colNames = TRUE, rowNames = TRUE)
+
+plotweb(net_aut, text.rot=90)
+
+# inverno
+net_win <- read.xlsx("data/winter_network.xlsx", colNames = TRUE, rowNames = TRUE)
+
+plotweb(net_win, text.rot=90)
+
+# primavera
+net_spr <- read.xlsx("data/spring_network.xlsx", colNames = TRUE, rowNames = TRUE)
+
+plotweb(net_spr, text.rot=90)
+
+# estate
+net_sum <- read.xlsx("data/summer_network.xlsx", colNames = TRUE, rowNames = TRUE)
+
+plotweb(net_win, text.rot=90)
+
+
 
 
 
