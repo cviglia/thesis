@@ -41,7 +41,6 @@ options(max.print=1000000)
 subcsv$real.taxonomy.pollinator..Family
 
 # per non vedere caselle vuote, bianche (sub non ancora analizzate)
-# lascio gli NAs perché rappresentano comunque un dato
 subcsv <- subcsv[!(subcsv$real.taxonomy.pollinator..Family == ""), ]
 
 subcsv$real.taxonomy.pollinator..Family
@@ -100,7 +99,7 @@ subcsv <- subcsv[!(subcsv$real.taxonomy.pollinator..Group == ""), ]
 subcsv$real.taxonomy.pollinator..Group
 str(subcsv$real.taxonomy.pollinator..Group)
 
-# barplot con etichette perpendicolari
+# barplot con etichette parallele
 # riduco dimensioni etichette
 par(las=1)
 barplot(table(subcsv$real.taxonomy.pollinator..Group),
@@ -125,15 +124,12 @@ dev.off()
 subcsv$real.taxonomy.pollinator..Order
 
 # per non vedere caselle vuote, bianche (sub non ancora analizzate)
-# lascio gli NAs perché rappresentano comunque un dato
 subcsv <- subcsv[!(subcsv$real.taxonomy.pollinator..Order == ""), ]
-
-# forse ne omette alcuni?
 
 subcsv$real.taxonomy.pollinator..Order
 str(subcsv$real.taxonomy.pollinator..Order)
 
-# barplot con etichette perpendicolari
+# barplot con etichette parallele
 # riduco dimensioni etichette
 par(las=1)
 barplot(table(subcsv$real.taxonomy.pollinator..Order),
