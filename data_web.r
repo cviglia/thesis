@@ -219,17 +219,17 @@ plotweb(net_win, text.rot=90, y.lim=c(0,2.0))
 # grecia primavera
 net_gsp <- read.xlsx("data/net_gree_spr.xlsx", colNames = TRUE, rowNames = TRUE)
 
-plotweb(net_gsp, text.rot=90)
+plotweb(net_gsp, text.rot=90, y.lim=c(0,2.0))
 
 # italia primavera
 net_isp <- read.xlsx("data/net_ita_spr.xlsx", colNames = TRUE, rowNames = TRUE)
 
-plotweb(net_isp, text.rot=90)
+plotweb(net_isp, text.rot=90, y.lim=c(0,2.0))
 
 # spagna primavera
 net_ssp <- read.xlsx("data/net_spa_spr.xlsx", colNames = TRUE, rowNames = TRUE)
 
-plotweb(net_ssp, text.rot=90)
+plotweb(net_ssp, text.rot=90, y.lim=c(0,2.0))
 
 
 
