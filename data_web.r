@@ -191,7 +191,7 @@ library(openxlsx)
 
 network_web <- read.xlsx("data/web_network.xlsx", colNames = TRUE, rowNames = TRUE)
 
-plotweb(network_web, text.rot=90)
+plotweb(network_web, labsize = 1, text.rot=90, y.lim=c(0,2.0))
 
 # network stagioni
 # autunno
