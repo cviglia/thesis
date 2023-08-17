@@ -233,6 +233,13 @@ plotweb(net_ssp, text.rot=90, y.lim=c(0,2.0))
 
 
 
+# network sindrome
+net_syn <- read.xlsx("data/syndr_network.xlsx", colNames = TRUE, rowNames = TRUE)
+
+plotweb(net_syn, text.rot=90, y.lim=c(0,2.0))
+
+
+
 
 
 
