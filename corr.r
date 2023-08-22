@@ -1,4 +1,5 @@
 # correlazione eventi-caricamenti
+# correlazione pearson, formula cor
 
 # matrici
 matrix1 <- matrix(c(15, 4, 3), nrow = 3)
@@ -10,4 +11,12 @@ print(correlazione)correlazione
 
 # correlazione = 0.9703617
 
+# cor^2=var
+
+# varianza
+varianza_matrice1 <- var(as.vector(matrix1))
+varianza_matrice2 <- var(as.vector(matrix2))
+
+print(varianza_matrice1)
+print(varianza_matrice2)
 
