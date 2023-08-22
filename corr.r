@@ -7,7 +7,7 @@ matrix2 <- matrix(c(845, 474, 299), nrow = 3)
 
 # correlazione
 correlazione <- cor(as.vector(matrix1), as.vector(matrix2))
-print(correlazione)correlazione
+print(correlazione)
 
 # correlazione = 0.9703617
 
