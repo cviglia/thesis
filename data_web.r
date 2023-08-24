@@ -20,6 +20,15 @@
 # 1243 piante identificate fino al genere
 # 1367 piante identificate fino alla famiglia
 
+# versione 24 agosto sub_en.node.3792_08_24
+# 1769 submissions
+# 1089 certified
+#  impollinatori identificati fino al genere
+#  impollinatori identificati fino alla famiglia
+#  impollinatori identificati fino all'ordine
+#  piante identificate fino al genere
+#  piante identificate fino alla famiglia
+
 
 setwd("C:/Rtesi/")
 
