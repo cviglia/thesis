@@ -20,14 +20,14 @@
 # 1243 piante identificate fino al genere
 # 1367 piante identificate fino alla famiglia
 
-# versione 24 agosto sub_en.node.3792_08_24
+# versione 25 agosto sub_en.node.3792_08_25
 # 1769 submissions
-# 1089 certified
-#  impollinatori identificati fino al genere
-#  impollinatori identificati fino alla famiglia
-#  impollinatori identificati fino all'ordine
-#  piante identificate fino al genere
-#  piante identificate fino alla famiglia
+# 982 certified, 344 validated
+# 1190 impollinatori identificati fino al genere
+# 1355 impollinatori identificati fino alla famiglia
+# 1560 impollinatori identificati fino all'ordine
+# 1294 piante identificate fino al genere
+# 1443 piante identificate fino alla famiglia
 
 
 setwd("C:/Rtesi/")
@@ -36,7 +36,7 @@ library(vegan)
 library(bipartite)
 
 
-subcsv <- read.csv("data/sub_en.node.3792_07_03.csv",
+subcsv <- read.csv("data/sub_en.node.3792_08_25.csv",
                    sep =";",
                    header = T)
 
