@@ -48,57 +48,22 @@ options(max.print=1000000)
 
 # per vedere solo famiglie impollinatori
 subcsv$real.taxonomy.pollinator..Family
-
 # per non vedere caselle vuote, bianche (sub non ancora analizzate)
 subcsv <- subcsv[!(subcsv$real.taxonomy.pollinator..Family == ""), ]
 
 subcsv$real.taxonomy.pollinator..Family
 str(subcsv$real.taxonomy.pollinator..Family)
 
-# barplot con etichette perpendicolari
-# riduco dimensioni etichette
-par(las=2)
-barplot(table(subcsv$real.taxonomy.pollinator..Family),
-        main = "Families of pollinators",
-        ylim = c(0,250),
-        cex.axis=0.3, cex.names=0.3)
-
-# immagine png
-png(filename = "outputs/pollinators_families.png",
-    width = 1800,
-    height = 1800,
-    res = 300)
-par(las=2)
-barplot(table(subcsv$real.taxonomy.pollinator..Family),
-        main = "Families of pollinators",
-        ylim = c(0,250),
-        cex.axis=0.3, cex.names=0.3)
-dev.off()
-
 
 # per vedere solo famiglie piante
 subcsv$real.taxonomy.plant..Family
+# per non vedere caselle vuote, bianche (sub non ancora analizzate)
 subcsv <- subcsv[!(subcsv$real.taxonomy.plant..Family == ""), ]
 
 subcsv$real.taxonomy.plant..Family
 str(subcsv$real.taxonomy.plant..Family)
 
-par(las=2)
-barplot(table(subcsv$real.taxonomy.plant..Family),
-        main = "Families of plants",
-        ylim = c(0,300),
-        cex.axis=0.3, cex.names=0.3)
 
-png(filename = "outputs/plants_families.png",
-    width = 1800,
-    height = 1800,
-    res = 300)
-par(las=2)
-barplot(table(subcsv$real.taxonomy.plant..Family),
-        main = "Families of plants",
-        ylim = c(0,300),
-        cex.axis=0.3, cex.names=0.3)
-dev.off()
 
 # per vedere solo gruppi di impollinatori
 subcsv$real.taxonomy.pollinator..Group
@@ -113,7 +78,7 @@ str(subcsv$real.taxonomy.pollinator..Group)
 par(las=1)
 barplot(table(subcsv$real.taxonomy.pollinator..Group),
         main = "Groups of pollinators",
-        ylim = c(0,400),
+        ylim = c(0,500),
         cex.axis=0.7, cex.names=0.7)
 
 # immagine gruppi
@@ -124,7 +89,7 @@ png(filename = "outputs/pollinators_groups.png",
 par(las=1)
 barplot(table(subcsv$real.taxonomy.pollinator..Group),
         main = "Groups of pollinators",
-        ylim = c(0,400),
+        ylim = c(0,500),
         cex.axis=0.7, cex.names=0.7)
 dev.off()
 
