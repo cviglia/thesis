@@ -1,5 +1,45 @@
 # LIFE4P
 
+# famiglie impollinatori grafici a barre
+# barplot con etichette perpendicolari
+# riduco dimensioni etichette
+par(las=2)
+barplot(table(subcsv$real.taxonomy.pollinator..Family),
+        main = "Families of pollinators",
+        ylim = c(0,250),
+        cex.axis=0.3, cex.names=0.3)
+
+# immagine png
+png(filename = "outputs/pollinators_families.png",
+    width = 1800,
+    height = 1800,
+    res = 300)
+par(las=2)
+barplot(table(subcsv$real.taxonomy.pollinator..Family),
+        main = "Families of pollinators",
+        ylim = c(0,250),
+        cex.axis=0.3, cex.names=0.3)
+dev.off()
+
+# famiglie piante grafici a barre
+
+par(las=2)
+barplot(table(subcsv$real.taxonomy.plant..Family),
+        main = "Families of plants",
+        ylim = c(0,300),
+        cex.axis=0.3, cex.names=0.3)
+
+png(filename = "outputs/plants_families.png",
+    width = 1800,
+    height = 1800,
+    res = 300)
+par(las=2)
+barplot(table(subcsv$real.taxonomy.plant..Family),
+        main = "Families of plants",
+        ylim = c(0,300),
+        cex.axis=0.3, cex.names=0.3)
+dev.off()
+
 # directory
 setwd("C:/Rtesi/") 
 
