@@ -115,3 +115,41 @@ network_bb06 <- read.xlsx("data/bb06.05_network.xlsx", colNames = TRUE, rowNames
 plotweb(network_bb06, labsize = 1.5, text.rot=90, y.lim=c(0,2.0))
 
 
+
+
+# sankey
+
+# "Plantaginaceae"	"Oxalidaceae"	"Geraniaceae" "Paeoniaceae"	
+# "Liliaceae"	"Asteraceae"  "Lamiaceae"	"Rosaceae"		
+
+# "Bee", "Wasp", "Hover fly", "Bee fly", "Beetle", "Butterfly", "Moth"
+
+# san lazzaro
+
+library(networkD3)
+library(dplyr)
+
+links <- data.frame(
+  source=c("Bee","Bee", "Bee", "Bee", "Bee", "Bee", "Bee", "Wasp", "Wasp", 
+           "Hover fly","Hover fly","Hover fly","Bee fly", "Butterfly"), 
+  target=c("Plantaginaceae","Oxalidaceae", "Paeoniaceae", "Liliaceae","Asteraceae", "Lamiaceae","Rosaceae", "Lamiaceae", "Rosaceae",
+           "Plantaginaceae","Geraniaceae", "Paeoniaceae", "Oxalidaceae", "Liliaceae"), 
+  value=c(6, 16, 69, 16, 1, 34, 4, 6, 2, 3, 3, 4, 2, 1))
+
+
+
+nodes <- data.frame(
+  name=c(as.character(links$source), 
+         as.character(links$target)) %>% unique())
+
+links$IDsource <- match(links$source, nodes$name)-1 
+links$IDtarget <- match(links$target, nodes$name)-1
+
+p <- sankeyNetwork(Links = links, Nodes = nodes,
+                   Source = "IDsource", Target = "IDtarget",
+                   Value = "value", NodeID = "name", 
+                   sinksRight=FALSE)
+p
+
+
+
