@@ -119,15 +119,17 @@ plotweb(network_bb06, labsize = 1.5, text.rot=90, y.lim=c(0,2.0))
 
 # sankey
 
-# "Plantaginaceae"	"Oxalidaceae"	"Geraniaceae" "Paeoniaceae"	
-# "Liliaceae"	"Asteraceae"  "Lamiaceae"	"Rosaceae"		
+
+library(networkD3)
+library(dplyr)
 
 # "Bee", "Wasp", "Hover fly", "Bee fly", "Beetle", "Butterfly", "Moth"
 
 # san lazzaro
 
-library(networkD3)
-library(dplyr)
+# "Plantaginaceae"	"Oxalidaceae"	"Geraniaceae" "Paeoniaceae"	
+# "Liliaceae"	"Asteraceae"  "Lamiaceae"	"Rosaceae"		
+
 
 links <- data.frame(
   source=c("Bee","Bee", "Bee", "Bee", "Bee", "Bee", "Bee", "Wasp", "Wasp", 
@@ -150,6 +152,45 @@ p <- sankeyNetwork(Links = links, Nodes = nodes,
                    Value = "value", NodeID = "name", 
                    sinksRight=FALSE)
 p
+
+
+# Skocjan Caves 
+
+# "Ranunculaceae", "Euphorbiaceae",	"Fabaceae",	"Asteraceae",	"Lamiaceae",
+# "Rosaceae",	"Polygalaceae", "Apiaceae",	"Caprifoliaceae"		
+
+links <- data.frame(
+  source=c("Bee", "Bee", "Bee", "Bee", "Bee", "Bee", "Wasp", "Wasp", "Wasp",
+           "Hover fly", "Hover fly", "Hover fly", "Hover fly", "Hover fly", "Hover fly", "Hover fly", 
+           "Bee fly", "Bee fly", "Bee fly",
+           "Beetle", "Beetle", "Beetle", "Beetle", "Beetle", "Beetle", "Beetle", "Beetle",
+           "Butterfly", "Butterfly",  "Butterfly", "Butterfly", "Butterfly", 
+           "Moth"), 
+  target=c("Ranunculaceae", "Fabaceae", "Lamiaceae", "Rosaceae", "Apiaceae", "Caprifoliaceae",
+           "Ranunculaceae", "Fabaceae", "Lamiaceae",
+           "Ranunculaceae", "Euphorbiaceae",	"Fabaceae", "Asteraceae", "Lamiaceae", "Rosaceae", "Polygalaceae", 
+           "Ranunculaceae", "Fabaceae", "Lamiaceae", 
+           "Ranunculaceae", "Euphorbiaceae", 	"Fabaceae", "Asteraceae", "Lamiaceae", "Rosaceae", "Polygalaceae", "Apiaceae",
+           "Ranunculaceae", "Euphorbiaceae", "Fabaceae",  "Rosaceae", "Apiaceae",
+           "Ranunculaceae"), 
+  value=c(26, 45, 24, 2, 4, 2, 1, 2, 1, 15, 1, 1, 2, 7, 1, 1, 1, 16, 5, 15, 3, 37, 1, 8, 2, 1, 1, 1, 2, 7, 1, 4, 5))
+
+
+nodes <- data.frame(
+  name=c(as.character(links$source), 
+         as.character(links$target)) %>% unique()
+)
+
+links$IDsource <- match(links$source, nodes$name)-1 
+links$IDtarget <- match(links$target, nodes$name)-1
+
+p <- sankeyNetwork(Links = links, Nodes = nodes,
+                   Source = "IDsource", Target = "IDtarget",
+                   Value = "value", NodeID = "name", 
+                   sinksRight=FALSE)
+p
+
+
 
 
 
