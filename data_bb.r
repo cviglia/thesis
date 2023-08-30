@@ -117,8 +117,6 @@ plotweb(network_bb06, labsize = 1.5, text.rot=90, y.lim=c(0,2.0))
 
 
 # sankey
-
-
 library(networkD3)
 library(dplyr)
 
