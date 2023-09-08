@@ -49,9 +49,9 @@ co + theme(plot.title = element_text(hjust=0.5, size=20), axis.title.x = element
 # theme(plot.title = element_text(hjust=0.5, size=20), axis.title.x = element_text(hjust=0.5, size = 12), axis.title.y = element_text(hjust=0.5, size= 12))) aggiusta I titoli e dimensioni dei caratteri. plot.title è il titolo principale, axis.title.x la x e axis.title.y la y. hjust permette di cambiare posizione(0.5 è la posizione centrale). 
 
 
-costanza.significatività= glm.nb(correlazione$submissions.2023 ~ correlazione$events.2023) 
+significance = glm.nb(correlazione$submissions.2023 ~ correlazione$events.2023) 
 
-summary(costanza.significatività) 
+summary(significance) 
 
 # correlazione$submissions.2023 ~ correlazione$events.2023 è la formula per calcolare il modello. La prima è la variabile dipendente(y), la seconda l’indipendente(y). In questo caso è come dire: le sottomissioni dipendono dagli eventi. 
 
