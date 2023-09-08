@@ -20,3 +20,8 @@ varianza_matrice2 <- var(as.vector(matrix2))
 print(varianza_matrice1)
 print(varianza_matrice2)
 
+
+# grafici correlazione
+setwd("C:/Rtesi/")
+
+
