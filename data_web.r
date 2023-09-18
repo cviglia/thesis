@@ -212,6 +212,15 @@ net_syn <- read.xlsx("data/syndr_network.xlsx", colNames = TRUE, rowNames = TRUE
 
 plotweb(net_syn, text.rot=90, y.lim=c(0,2.0))
 
+# colorare vettori
+# Carica il network
+net_syn <- read.xlsx("data/syndr_network.xlsx", colNames = TRUE, rowNames = TRUE)
+
+# Definisci un vettore di colori per le interazioni
+interaction_colors <- c("dark red", "white", "orange", "yellow", "light blue", "dark green", "pink")
+
+plotweb(net_syn, labsize = 1.5, text.rot = 90, y.lim = c(0, 2.0), col.interaction = interaction_colors)
+
 
 
 
