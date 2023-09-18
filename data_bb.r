@@ -146,7 +146,7 @@ links$IDtarget <- match(links$target, nodes$name)-1
 
 p <- sankeyNetwork(Links = links, Nodes = nodes,
                    Source = "IDsource", Target = "IDtarget",
-                   Value = "value", NodeID = "name", 
+                   Value = "value", NodeID = "name", fontSize= 15,
                    sinksRight=FALSE)
 p
 
@@ -183,7 +183,7 @@ links$IDtarget <- match(links$target, nodes$name)-1
 
 p <- sankeyNetwork(Links = links, Nodes = nodes,
                    Source = "IDsource", Target = "IDtarget",
-                   Value = "value", NodeID = "name", 
+                   Value = "value", NodeID = "name", fontSize= 15,
                    sinksRight=FALSE)
 p
 
