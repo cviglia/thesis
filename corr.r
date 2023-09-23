@@ -3,7 +3,7 @@
 library(ggplot2)
 library(hrbrthemes)
 
-#dataframe totale
+#dataframe totale con sub made during a bb
 subev.total=data.frame(events=c(15, 4, 3, 1), submissions=c(466, 106, 88, 1), countries=c("Spain", "Italy", "Greece", "Slovenia")) 
 
 #grafico
@@ -27,7 +27,7 @@ co + theme(plot.title = element_text(hjust=0.5, size=20), axis.title.x = element
 
 
 
-
+#.................................................................
 # correlazione eventi-caricamenti
 # correlazione pearson, formula cor
 
