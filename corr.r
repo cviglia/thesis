@@ -1,6 +1,26 @@
 # nuova correlazione
 
+library(ggplot2)
+library(hrbrthemes)
+
+#dataframe totale
 subev.total=data.frame(events=c(15, 4, 3, 1), submissions=c(466, 106, 88, 1), countries=c("Spain", "Italy", "Greece", "Slovenia")) 
+
+#grafico
+
+p <- ggplot(subev.total, aes(x=events, y=submissions, color=countries)) + geom_point(size= 3) + geom_smooth(method="glm.nb" , color="black", se=TRUE) + theme_ipsum()
+
+# ggplot per il grafico, color può essere usato per dare differenti colori alle variabili sulla base delle etichette. 
+# geom_point(size= 3) aggiunge I punti al grafico, size può essere usato per ingrandire o diminuire la grandezza dei punti.
+# geom_smooth(method="glm.nb" , color="black", se=TRUE) aggiunge la retta di regressione, method è il metodo usato per tracciare la regressione 
+# (glm.nb è la regressione binomiale negativa, adatta ai dati da conta), color è il colore della retta, se=TRUE aggiunge la deviazione standard (FALSE non metterla) 
+# theme_ipsum() migliora l’aspetto del plot 
+
+co=print(p + labs(title = "Correlation between submissions and bioblitzes", color = "Countries", y = "Submissions", x = "Bioblitz events")) 
+
+co + theme(plot.title = element_text(hjust=0.5, size=20), axis.title.x = element_text(hjust=0.5, size = 12), axis.title.y = element_text(hjust=0.5, size= 12))
+
+
 
 
 
