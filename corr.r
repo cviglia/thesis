@@ -35,7 +35,7 @@ p2 <- ggplot(subev.23, aes(x= subev.23$events, y=subev.23$submissions, color= su
 
 co=print(p2 + labs(title = "Correlation between submissions and bioblitzes in 2023", color = "Countries", y = "Submissions in 2023", x = "Bioblitz events in 2023 "))
 
-co2= co + theme(axis.title.x = element_text(size = 12, hjust = 0.5), axis.title.y = element_text(size=12, hjust = 0.5), plot.title = element_text(size=20, hjust=0.5))
+co + theme(plot.title = element_text(size=18, hjust=0.5), axis.title.x = element_text(size = 12, hjust = 0.5), axis.title.y = element_text(size=12, hjust = 0.5))
 
 
 
