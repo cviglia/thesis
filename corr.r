@@ -23,6 +23,21 @@ co=print(p + labs(title = "Correlation between submissions and bioblitzes", colo
 co + theme(plot.title = element_text(hjust=0.5, size=20), axis.title.x = element_text(hjust=0.5, size = 12), axis.title.y = element_text(hjust=0.5, size= 12))
 
 
+# dataframe 2023 with sub made during a bb
+subev.23= data.frame(events=c(5, 1, 2, 1), submissions= c(146, 0, 9, 1), Countries=c("Spain ", "Italy", "Greece", "Slovenia") )
+
+# correlazione 23
+cor.23=glm.nb(subev.23$submissions~ subev.23$events)
+summary(cor.23)
+
+#grafico
+p2 <- ggplot(subev.23, aes(x= subev.23$events, y=subev.23$submissions, color= subev.23$Countries)) + geom_point(size= 3) + geom_smooth(method="glm.nb" , color="black", se=TRUE) + theme_ipsum()
+
+co=print(p2 + labs(title = "Correlation between submissions and bioblitzes in 2023", color = "Countries", y = "Submissions in 2023", x = "Bioblitz events in 2023 "))
+
+co2= co + theme(axis.title.x = element_text(size = 12, hjust = 0.5), axis.title.y = element_text(size=12, hjust = 0.5), plot.title = element_text(size=20, hjust=0.5))
+
+
 
 
 
