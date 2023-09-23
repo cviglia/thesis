@@ -2,6 +2,8 @@
 
 library(ggplot2)
 library(hrbrthemes)
+library(MASS)
+
 
 #dataframe totale con sub made during a bb
 subev.total=data.frame(events=c(15, 4, 3, 1), submissions=c(466, 106, 88, 1), countries=c("Spain", "Italy", "Greece", "Slovenia")) 
