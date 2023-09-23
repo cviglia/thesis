@@ -1,3 +1,13 @@
+# nuova correlazione
+
+subev.total=data.frame(events=c(15, 4, 3, 1), submissions=c(466, 106, 88, 1), countries=c("Spain", "Italy", "Greece", "Slovenia")) 
+
+
+
+
+
+
+
 # correlazione eventi-caricamenti
 # correlazione pearson, formula cor
 
