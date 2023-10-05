@@ -10,16 +10,16 @@ library(bipartite)
 # to make the network
 
 library(ggplot2)
-# for the plot, graph
+# to make the plot
 
 library(hrbrthemes)
 # for the theme with colours
 
 library(MASS)
-# correlazione, regression analysis
+# regression analysis
 
 library(networkD3)
-# sankey diagram
+# to make sankey diagram
 
 library(dplyr)
 # manipulation of sankey
